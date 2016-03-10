@@ -23,7 +23,7 @@ public class InputOutputGui {
         try {
             lastName = nameService.extractLastName(fullName);
         } catch (IllegalArgumentException ie) {
-            System.out.println("The name you entered didn't meet the format expected.");
+            JOptionPane.showMessageDialog(null, ie.getMessage());
         }
         String msg = "Your last name is: " + lastName;
         JOptionPane.showMessageDialog(null, msg);

@@ -29,7 +29,7 @@ public class NameService {
         }
         //String lastName = null;
         
-        int spaceIndex = fullName.indexOf(" ");
+        int spaceIndex = fullName.lastIndexOf(" ");
         String lastName = fullName.substring(spaceIndex, fullName.length());
         
         // alternative

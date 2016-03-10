@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
 public class Challenge1 {
     private static final int LAST_NAME_IDX = 0;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IllegalArgumentException {
         Challenge1 app = new Challenge1();
         
         String fullName = JOptionPane.showInputDialog("Enter full name (use Format: first last):");
@@ -28,7 +28,7 @@ public class Challenge1 {
             String msg = "Your last name is: " + lastName;
             JOptionPane.showMessageDialog(null, msg);
         } catch (IllegalArgumentException ie) {
-            System.out.println("Name is not valid.");
+            System.out.println(ie.getMessage());
         }
     }
     
@@ -45,11 +45,11 @@ public class Challenge1 {
         }
         //String lastName = null;
         
-        int spaceIndex = fullName.indexOf(" ");
+        int spaceIndex = fullName.lastIndexOf(" ");
         String lastName = fullName.substring(spaceIndex, fullName.length());
         
         // alternative
-//        String[] parts = fullName.split(" ");
+        //  String[] parts = fullName.split(" ");
         
         // Your code goes here. Assign your value to lastName
         return lastName;

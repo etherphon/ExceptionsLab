@@ -18,7 +18,7 @@ package lab0;
  */
 public class Employee {
     private static final int MAX_VACATION_DAYS = 28;
-    private static final int MIN_NAME_LENGTH = 2;
+    private static final int MIN_NAME_LENGTH = 1;
     private static final int MAX_NAME_LENGTH = 24;
     private String firstName;
     private String lastName;
